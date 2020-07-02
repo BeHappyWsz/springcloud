@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Map;
+
 /**
  * @Description :
  * @Author : wsz
@@ -19,7 +21,7 @@ public class ClientWeb {
     CustomConfig customConfig;
 
     @GetMapping(value = "")
-    public CustomConfig getConfig() {
-        return customConfig;
+    public Map getConfig() {
+        return customConfig.getConfig();
     }
 }
