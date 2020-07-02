@@ -3,6 +3,7 @@ package com.springcloud.serviceribbon.web;
 import com.springcloud.serviceribbon.service.TestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
@@ -12,6 +13,7 @@ import org.springframework.web.client.RestTemplate;
  * @Date: 2020-07-01 15:47
  */
 @RestController
+@RequestMapping(value = "/ribbonApi")
 public class TestWeb {
 
     @Autowired
@@ -22,7 +24,7 @@ public class TestWeb {
      * @param name
      * @return
      */
-    @GetMapping(value = "/ribbon")
+    @GetMapping(value = "/test")
     public String ribbon (String name) {
         return testService.ribbonString(name);
     }

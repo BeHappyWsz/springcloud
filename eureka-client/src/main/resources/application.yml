@@ -5,6 +5,7 @@ spring:
   application:
     name: eureka-service
 
+## 启动成功http://localhost:8088查看Eureka面板
 eureka:
   client:
     service-url:

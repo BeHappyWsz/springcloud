@@ -1,0 +1,24 @@
+server:
+  port: 8095
+
+spring:
+  application:
+    name: service_zuul
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8088/eureka/
+
+## strip-prefix默认为true，此时http://localhost:8095/ribbonApi/ribbonApi/test?name=123
+## strip-prefix设置为false，此时http://localhost:8095/ribbonApi/test?name=123
+zuul:
+  routes:
+    ribbonApi:
+      path: /ribbonApi/**
+      serviceId: service_ribbon
+      strip-prefix: false
+    feignApi:
+      path: /feignApi/**
+      serviceId: service_feign
+      strip-prefix: false

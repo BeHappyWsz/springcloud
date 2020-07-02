@@ -2,6 +2,7 @@ package com.springcloud.serviceribbon.service;
 
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -16,6 +17,9 @@ public class TestService {
     @Autowired
     RestTemplate restTemplate;
 
+    @Value("${serviceHost}")
+    private String host;
+
     /**
      * 断路器hystrix + restTemplate
      * @param name
@@ -23,7 +27,7 @@ public class TestService {
      */
     @HystrixCommand(fallbackMethod = "fallbackError")
     public String ribbonString (String name) {
-        return restTemplate.getForObject("http://eureka-service/test?name=" + name, String.class);
+        return restTemplate.getForObject(host + "/test?name=" + name, String.class);
     }
 
     /**

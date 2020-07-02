@@ -12,13 +12,13 @@ import org.springframework.web.bind.annotation.RestController;
  * @Date: 2020-07-02 09:32
  */
 @RestController
-@RequestMapping(value = "feign")
+@RequestMapping(value = "feignApi")
 public class TestWeb {
 
     @Autowired
     FeignService feignService;
 
-    @GetMapping(value = "")
+    @GetMapping(value = "/test")
     public String feignTest(String name) {
         return feignService.getTest(name);
     }
