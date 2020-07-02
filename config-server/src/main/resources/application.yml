@@ -4,9 +4,9 @@ server:
 spring:
   application:
     name: config-server
-   ##  http://localhost:9000/config-client/dev
-   ##  http://localhost:9000/config-client/prod
-   ## Ö±½Ó²é¿´ÄÚÈİ£ºhttp://localhost:9000/config-client-prod.yml ´Ë·½·¨´æÔÚÖĞÎÄÂÒÂë
+    ##  http://localhost:9000/config-client/dev
+    ##  http://localhost:9000/config-client/prod
+    ## ç›´æ¥æŸ¥çœ‹å†…å®¹ï¼šhttp://localhost:9000/config-client-prod.yml æ­¤æ–¹æ³•å­˜åœ¨ä¸­æ–‡ä¹±ç 
   cloud:
     config:
       server:
