@@ -1,6 +1,5 @@
 ## 注意文件编码形式，中文上传后可能乱码，导致无法读取
-server:
-  port: 8080
-  name: devServer
 
+name: devServer
 author: 蜡笔小新
+age: 100

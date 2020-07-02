@@ -4,20 +4,20 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 /**
- * @Description : 配置文件读取类
+ * @Description :
  * @Author : wsz
- * @Date: 2020-07-02 17:16
+ * @Date: 2020-07-02 20:54
  */
 @Component
 public class CustomConfig {
 
-    @Value("${server.name}")
-    public String name;
+
+    @Value("${name}")
+    String name;
 
     @Value("${author}")
-    public String author;
+    String author;
 
-    public CustomConfig getConfig() {
-        return this;
-    }
+    @Value("${age}")
+    int age;
 }

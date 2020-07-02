@@ -7,19 +7,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * @Description : 获取配置资源
+ * @Description :
  * @Author : wsz
- * @Date: 2020-07-02 17:15
+ * @Date: 2020-07-02 20:11
  */
 @RestController
-@RequestMapping(value = "config")
-public class ResourceWeb{
+@RequestMapping(value = "client")
+public class ClientWeb {
 
     @Autowired
     CustomConfig customConfig;
 
     @GetMapping(value = "")
     public CustomConfig getConfig() {
-        return customConfig.getConfig();
+        return customConfig;
     }
 }
