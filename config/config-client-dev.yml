@@ -1,4 +1,5 @@
 server:
   port: 8080
   name: devServer
-author: '蜡笔小新'
+
+author: 蜡笔小新
