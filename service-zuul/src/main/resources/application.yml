@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: service_zuul
+    name: service-zuul
 
 eureka:
   client:
@@ -16,9 +16,9 @@ zuul:
   routes:
     ribbonApi:
       path: /ribbonApi/**
-      serviceId: service_ribbon
+      serviceId: service-ribbon
       strip-prefix: false
     feignApi:
       path: /feignApi/**
-      serviceId: service_feign
+      serviceId: service-feign
       strip-prefix: false
