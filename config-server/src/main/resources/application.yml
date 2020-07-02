@@ -6,7 +6,7 @@ spring:
     name: config_server
    ##  http://localhost:9000/config-client/dev
    ##  http://localhost:9000/config-client/prod
-   ## 直接查看内容：http://localhost:9000/config-client-prod.yml
+   ## 直接查看内容：http://localhost:9000/config-client-prod.yml 此方法存在中文乱码
   cloud:
     config:
       server:
