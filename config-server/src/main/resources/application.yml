@@ -16,3 +16,8 @@ spring:
           username:
           password:
       label: master
+# 注册到服务中心
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8088/eureka/
