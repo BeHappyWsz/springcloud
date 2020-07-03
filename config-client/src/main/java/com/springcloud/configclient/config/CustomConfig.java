@@ -1,8 +1,8 @@
 package com.springcloud.configclient.config;
 
 import com.google.common.collect.Maps;
-import lombok.Data;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.stereotype.Component;
 
 import java.util.Map;
@@ -10,11 +10,12 @@ import java.util.Map;
 
 /**
  * @Description :
+ * 注意RefreshScope的位置，位于Application引导类上无效
  * @Author : wsz
  * @Date: 2020-07-02 20:54
  */
 @Component
-@Data
+@RefreshScope
 public class CustomConfig {
 
     @Value("${name}")
