@@ -15,6 +15,7 @@ spring:
           search-paths: config
           username:
           password:
+          clone-on-start: true
       label: master
 # 注册到服务中心
 eureka:
